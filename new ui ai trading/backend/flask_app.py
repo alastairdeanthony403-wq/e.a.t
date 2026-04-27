@@ -2,6 +2,7 @@
 AI Trading Engine — Flask backend (SaaS edition)
 All routes are mounted under /api so the platform's ingress routes them to port 8001.
 """
+from engine.paper_trading import say_hello
 from flask import Flask, jsonify, request, g
 from flask_cors import CORS
 import pandas as pd
