@@ -1021,3 +1021,7 @@ def stats():
         "balance": round(cfg["starting_balance"] + sum(pnls), 2),
         "starting_balance": cfg["starting_balance"],
     })
+    @app.route("/test-risk")
+def test_risk():
+    return can_open_new_trade()
+        })
