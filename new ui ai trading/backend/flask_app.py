@@ -838,7 +838,10 @@ def backtest_run_detail(run_id):
     return jsonify({"symbol": row[0], "interval": row[1], "strategy": row[2],
                     "summary": json.loads(row[3]), "trades": json.loads(row[4]),
                     "created_at": row[5]})
-
+@app.route("/test-risk")
+def test_risk():
+    return can_open_new_trade()
+    
 @app.route("/test-engine")
 def test_engine():
     return say_hello()
