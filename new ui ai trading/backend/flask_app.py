@@ -838,6 +838,9 @@ def backtest_run_detail(run_id):
                     "summary": json.loads(row[3]), "trades": json.loads(row[4]),
                     "created_at": row[5]})
 
+@app.route("/test-engine")
+def test_engine():
+    return say_hello()
 
 # Settings
 @app.route("/api/settings", methods=["GET"])
